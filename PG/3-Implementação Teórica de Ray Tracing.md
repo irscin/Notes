@@ -1,12 +1,12 @@
 **Passo 1**
 Para cada pixel do nosso plano de projeção, traçamos um raio do olho passando bem pelo meio do pixel. E
-Então checamos cada objeto da cena para saber se o raio intersecta algume deles, caso haja mais de uma intersecção, ficamos com a intersecção do objeto mais próximo.
-**Passo 2**
-Traçamos o shadow ray, ou seja, o raio que vai do ponto de intersecção do raio primário com o objeto até a fonte de luz. Se há uma obstrução, então aquele ponto é sombreado, se o raio consegue chegar até a fonte de luz, então aquela área está iluminada.
-**Passo 3**
+Então checamos cada objeto da cena para saber se o raio intersecta algume deles, caso haja mais de uma intersecção, ficamos com a intersecção do objeto mais próximo.\
+**Passo 2**\
+Traçamos o shadow ray, ou seja, o raio que vai do ponto de intersecção do raio primário com o objeto até a fonte de luz. Se há uma obstrução, então aquele ponto é sombreado, se o raio consegue chegar até a fonte de luz, então aquela área está iluminada.\
+**Passo 3**\
 Repetimos isso para cada pixel do plano bidimensional.
-No fim, teremos uma representação em 2D da imagem 3D.
-**Pseudocódigo**
+No fim, teremos uma representação em 2D da imagem 3D.\
+**Pseudocódigo**\
 ```
 for (int j = 0; j < imageHeight; ++j) { 
     for (int i = 0; i < imageWidth; ++i) { 
