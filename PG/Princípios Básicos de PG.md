@@ -1,4 +1,0 @@
-- O fundamento do processamento gráfico é bem simples. Queremos transformar um cenário tridimensional em uma imagem bidimensional. Para isso, temos um plano de projeção, o canvas, onde será projetados os objetos tridimensionais. Esse plano bidimensional é a base de uma pirâmide, "deitada", onde o vértice dela contém nossa câmera, ou olho, enfim, o observador da cena.
-Fazendo um traçado básico, traçamos uma linha de cada vértice dos objetos tridimensionais até o vértice da pirâmide, criando pontos de intersecção. Desenhamos arestas copiando as arestas dos objetos tridimensionais.
-- Cores são o efeito da reflexão de fótons em objetos. Quando um objeto reflete luz azul e absorve as outras, ele é visto como tendo a cor azul.
-- A quantidade de fótons que chegam em um objeto é conservada. Ou seja, os fótons que atingem um objeto são iguais à soma dos fótons que são refletidos, absorvidos e transmitidos.
