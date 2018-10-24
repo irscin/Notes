@@ -72,6 +72,7 @@ public:
     }
 };
 
+//Declarando um vetor de 3 dimensões onde cada componente é um float
 typedef Vec3<float> Vec3f;
 
 class Sphere
@@ -96,6 +97,7 @@ public:
     //[/comment]
     bool intersect(const Vec3f &rayorig, const Vec3f &raydir, float &t0, float &t1) const
     {
+        // x.dot(k) significa a projeção de x sobre k
         Vec3f l = center - rayorig;
         float tca = l.dot(raydir);
         if (tca < 0) return false;
@@ -255,13 +257,15 @@ int main(int argc, char **argv)
 {
     srand48(13);
     std::vector<Sphere> spheres;
-    // position, radius, surface color, reflectivity, transparency, emission color
+    // position, radius, surface color(RGB), reflectivity, transparency, emission color
+    //Essa primeira esfera é o "horizonte" preto que aparece na imagem
+    //Note que ela tem y=-1004 e raio = 10000, ou seja, está bem em baixo e é muito grande
     spheres.push_back(Sphere(Vec3f( 0.0, -10004, -20), 10000, Vec3f(0.20, 0.20, 0.20), 0, 0.0));
-    spheres.push_back(Sphere(Vec3f( 0.0,      0, -20),     4, Vec3f(1.00, 0.32, 0.36), 1, 0.5));
-    spheres.push_back(Sphere(Vec3f( 5.0,     -1, -15),     2, Vec3f(0.90, 0.76, 0.46), 1, 0.0));
+    spheres.push_back(Sphere(Vec3f( 0.0,      0, -20),     4, Vec3f(0.38, 1.00, 0.31), 1, 0.5));
+    spheres.push_back(Sphere(Vec3f( 5.0,     -1, -15),     2, Vec3f(0.45, 0.17, 0.83), 1, 0.0));
     spheres.push_back(Sphere(Vec3f( 5.0,      0, -25),     3, Vec3f(0.65, 0.77, 0.97), 1, 0.0));
     spheres.push_back(Sphere(Vec3f(-5.5,      0, -15),     3, Vec3f(0.90, 0.90, 0.90), 1, 0.0));
-    // light
+    // Essa aqui é a fonte de luz. Observe que é como se fosse uma esfera de raio 3
     spheres.push_back(Sphere(Vec3f( 0.0,     20, -30),     3, Vec3f(0.00, 0.00, 0.00), 0, 0.0, Vec3f(3)));
     render(spheres);
     
