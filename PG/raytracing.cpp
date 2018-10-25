@@ -92,18 +92,23 @@ public:
         center(c), radius(r), radius2(r * r), surfaceColor(sc), emissionColor(ec),
         transparency(transp), reflection(refl)
     { /* empty */ }
-    //[comment]
-    // Compute a ray-sphere intersection using the geometric solution
-    //[/comment]
+    // Calculando a intersecção de um raio com uma das esferas usando o método geométrico
     bool intersect(const Vec3f &rayorig, const Vec3f &raydir, float &t0, float &t1) const
     {
         // x.dot(k) significa a projeção de x sobre k
+        // Calculando a distância entre o centro da esfera e a origem do raio
         Vec3f l = center - rayorig;
+        // Calculando a projeção de L na direção do raio
         float tca = l.dot(raydir);
+        // Se for negativo, significa que o raio está indo na direção contrária, portanto, não intersecta a esfera
         if (tca < 0) return false;
-        float d2 = l.dot(l) - tca * tca;
-        if (d2 > radius2) return false;
-        float thc = sqrt(radius2 - d2);
+        // Usando teorema de pitágoras para calcular a distância entre o centro da esfera e o raio de luz
+        float dSquared = l.dot(l) - tca * tca;
+        // Se a distância entre o centro da esfera e o raio de luz for maior que o raio,da esfera, então o raio de luz passa por fora dela, sem intersectar
+        if (dSquared > radius2) return false;
+        // Usando Pitágoras para calcular a distância entre o primeiro ponto de intersecção e o pé da altura do triângulo PP'C onde P e P' são pontos de intersecção e C e o centro
+        float thc = sqrt(radius2 - dSquared);
+        // Calculando os pontos de intersecção em si
         t0 = tca - thc;
         t1 = tca + thc;
         
