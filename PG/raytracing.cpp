@@ -149,7 +149,9 @@ Vec3f trace(
     for (unsigned i = 0; i < spheres.size(); ++i) {
         float t0 = INFINITY, t1 = INFINITY;
         if (spheres[i].intersect(rayorig, raydir, t0, t1)) {
+            // Acredito que neste caso o raio de origine dentro da esfera, mas ainda não tenho certeza
             if (t0 < 0) t0 = t1;
+            //Um raio pode intersectar vários objetos, sendo assim, o objeto vísivel vai ser o que tiver o ponto de intersecção t0 o menor. Aqui, guardamos o menor ponto de intersecção em tnear
             if (t0 < tnear) {
                 tnear = t0;
                 sphere = &spheres[i];
@@ -169,6 +171,7 @@ Vec3f trace(
     float bias = 1e-4; // add some bias to the point from which we will be tracing
     bool inside = false;
     if (raydir.dot(nhit) > 0) nhit = -nhit, inside = true;
+    // Se a esfera for transparente ou difusa e não tivermos chegado no limite de iterações, vamos fazer os cálculos relevantes
     if ((sphere->transparency > 0 || sphere->reflection > 0) && depth < MAX_RAY_DEPTH) {
         float facingratio = -raydir.dot(nhit);
         // change the mix value to tweak the effect
@@ -201,6 +204,8 @@ Vec3f trace(
                 Vec3f transmission = 1;
                 Vec3f lightDirection = spheres[i].center - phit;
                 lightDirection.normalize();
+                // Aqui vamos fazer o sombreamento. 
+                // Testo se a luz intersecta alguma coisa na continuação do seu caminho. Ou seja, ao invés de sair da câmera e percorrer a cena até atingir algum objeto, dessa vez ela sai do ponto de intersecção em direção a fonte de luz e, se atingir alguma coisa, sabemos que ali haverá uma sombra
                 for (unsigned j = 0; j < spheres.size(); ++j) {
                     if (i != j) {
                         float t0, t1;
