@@ -243,7 +243,8 @@ void render(const std::vector<Sphere> &spheres)
             float yy = (1 - 2 * ((y + 0.5) * invHeight)) * angle;
             Vec3f raydir(xx, yy, -1);
             raydir.normalize();
-            *pixel = trace(Vec3f(0), raydir, spheres, 0);
+            //Podemos passar as coordenadas da câmera aqui
+            *pixel = trace(Vec3f(5.0,0.0,0.0), raydir, spheres, 0);
         }
     }
     // Save result to a PPM image (keep these flags if you compile under Windows)
