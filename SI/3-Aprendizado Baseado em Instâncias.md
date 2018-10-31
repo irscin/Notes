@@ -31,4 +31,19 @@ Sendo assim, precisamos escolher bem o valor de K.
 - Valores altos:
   - Aumentam a contribução de valores pouco similares e, sendo assim, irrelevantes.
   - Mais resistente ao ruído
-
+- Frequentemente escolhido na tentativa e erro.
+**Empate na classificação de uma classe**
+Quando ocorrer um empate, repete-se o algoritmo com k-1. Em caso de novo empate, isso é repetido até que se tenha uma resposta.\
+**Uso de pesos**
+- Instâncias mais distantes da instância a ser classificada têm uma influência menor na classificação.
+- Se os atributos relevantes da entrada não forem bem definidos, isso pode levar a resultados ruins.
+Por exemplo, temos 10 atributos nas instâncias de exemplo, mas apenas 2 atributos são relevantes, se não filtrarmos isso, os outros 8 atributos podem interferir na classificação da nova instância.\
+**Discussão**
+- Vantagens:
+  - Fácil de implementar
+  - Não requer etapa de treinamento
+  - Bom para datasets médios e pequenos
+  - Paralelizável
+- Desvantagens
+  - Sensível a ruído, elementos irrelevantes ou redundantes
+  - Custo computacional e de armazenamento imprátco em algumas situações
