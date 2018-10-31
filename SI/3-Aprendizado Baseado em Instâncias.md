@@ -31,7 +31,7 @@ Sendo assim, precisamos escolher bem o valor de K.
 - Valores altos:
   - Aumentam a contribução de valores pouco similares e, sendo assim, irrelevantes.
   - Mais resistente ao ruído
-- Frequentemente escolhido na tentativa e erro.
+- Frequentemente escolhido na tentativa e erro.\
 **Empate na classificação de uma classe**
 Quando ocorrer um empate, repete-se o algoritmo com k-1. Em caso de novo empate, isso é repetido até que se tenha uma resposta.\
 **Uso de pesos**
