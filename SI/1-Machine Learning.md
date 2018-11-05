@@ -5,12 +5,12 @@ Usamos os exemplos e um conjunto de possíveis hipóteses como input do algoritm
 Umas das formas de resolver um problema de ML é utilizando combinações lineares das variáveis envolvidas e então separando-as de acordo com uma fronteira.\
 ![Exemplo de Separação Linear](https://raw.githubusercontent.com/LinuxUserIRS/Notes/master/SI/Resources/SeparacaoLinear.png)\
 Nem sempre os elementos irão se separar perfeitamente de forma que seja possível traçar uma linha clara entre os grupos, para isso, podemos umas o teorema de Cover, que diz que quando aumentamos as dimensões das variáveis, elas tendem a se linearizar.\
-**Fases da ML**\
+**Fases da ML**
 - Fase de Treinamento
 É nessa fase que o algoritmo de ML usa seu dataset para ajustar seus parâmetros.
 - Fase de Testes
 É onde o seu desempenho é avaliado utilizando um conjunto de dados de teste.\
-**Paradigmas de ML**\
+**Paradigmas de ML**
 - Simbólico
 Constrói uma representação simbólica de um conceito atráves de análises de exmplos e contraexemplos.
 Algumas formas comuns incluem:
@@ -33,7 +33,7 @@ Podem ser:
 Usam modelos computacionais baseados na teoria da evolução.
 - Paradigma conexionista
 Frande númro de unidades de processamento conectadas entre si.\
-**Tipos de ML**\
+**Tipos de ML**
 - Aprendizado supervisionado
 O algoritmo recebe o dataset "mastigadinho", já com todos os seus elementos classificados e precisa, a partir daí, ser capaz de classificar novos elementos.
 - Aprendizado não supervisionado
