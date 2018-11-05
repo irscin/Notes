@@ -12,7 +12,7 @@ Nem sempre os elementos irão se separar perfeitamente de forma que seja possív
 É onde o seu desempenho é avaliado utilizando um conjunto de dados de teste.\
 **Paradigmas de ML**
 - Simbólico
-Constrói uma representação simbólica de um conceito atráves de análises de exmplos e contraexemplos.
+Constrói uma representação simbólica de um conceito atráves de análises de exemplos e contraexemplos.
 Algumas formas comuns incluem:
 1. Expressões Lógicas
 2. Árvores de Decisão
