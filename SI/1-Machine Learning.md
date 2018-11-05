@@ -11,30 +11,30 @@ Nem sempre os elementos irão se separar perfeitamente de forma que seja possív
 - Fase de Testes
 É onde o seu desempenho é avaliado utilizando um conjunto de dados de teste.\
 **Paradigmas de ML**
-- Simbólico
+- Simbólico\
 Constrói uma representação simbólica de um conceito atráves de análises de exemplos e contraexemplos.
 Algumas formas comuns incluem:
 1. Expressões Lógicas
 2. Árvores de Decisão
 3. Regras de Produção
 4. Redes Semânticas
-- Baseado em Instâncias
+- Baseado em Instâncias\
 Classificam dados baseado em dados similares cuja a classificação já é conhecida.
 Ex:
 1. Raciocínio de Casos
 2. K-Vizinhos mais próximos
-- Paradigma Estático
+- Paradigma Estático\
 Constrói um modelo estático do problema, normalmente usando a **Regra de Bayes**
 Podem ser:
 1. Paramétricas
 2. Semi-paramétricas
 3. Não paramétricas
-- Paradigma evolucionário
+- Paradigma evolucionário\
 Usam modelos computacionais baseados na teoria da evolução.
-- Paradigma conexionista
-Frande númro de unidades de processamento conectadas entre si.\
+- Paradigma conexionista\
+Grande número de unidades de processamento conectadas entre si.\
 **Tipos de ML**
-- Aprendizado supervisionado
+- Aprendizado supervisionado\
 O algoritmo recebe o dataset "mastigadinho", já com todos os seus elementos classificados e precisa, a partir daí, ser capaz de classificar novos elementos.
-- Aprendizado não supervisionado
+- Aprendizado não supervisionado\
 É dado um dataset sem qualquer informação adicional, o algoritmo então precisa precisa separar esses elementos por conta própria e então enteder como esses grupos se relacionam ou o que representam.
