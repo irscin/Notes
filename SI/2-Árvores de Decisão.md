@@ -1,5 +1,5 @@
 **Árvores de Decisão**
-Funcionam basicmente separando valores em suas bifurcações através de vários critérios ate que se atinja a precisão desejada ou se esgotem asv variáveis disponíveis sobre as quais fazer decisões. Árvores de decisão são uma abordagem simples, porém efetivas quando se tratando de conjuntos fixos de variáveis e cujo os outputs são limitados, de preferência, binários. Mas també podem funcionar para atributos contínuos, definindo-se faixas de valores, por exemplo.
+Funcionam basicmente separando valores em suas bifurcações através de vários critérios ate que se atinja a precisão desejada ou se esgotem as variáveis disponíveis sobre as quais fazer decisões. Árvores de decisão são uma abordagem simples, porém efetivas quando se tratando de conjuntos fixos de variáveis e cujo os outputs são limitados, de preferência, binários. Mas també podem funcionar para atributos contínuos, definindo-se faixas de valores, por exemplo.
 Algumas aplicações comuns incluem: análise de crédito e dignóstico de pacientes e equipamentos.\
 [Uma Introdução Visual ao Aprendizado de Máquina](http://www.r2d3.us/uma-introducao-visual-ao-aprendizado-de-maquina-1/)\
 **Algoritmo ID3**
